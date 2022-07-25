@@ -6,7 +6,7 @@ import string
 # Create your views here.
 
 def home(request):
-    return render(request, 'password_generator/generator/templates/generator/home.html')
+    return render(request, 'generator/home.html')
 
 def password(request):
 
@@ -24,7 +24,7 @@ def password(request):
     thepassword = ''
     for i in range(length):
         thepassword += random.choice(low_letters)
-    return render(request, 'password_generator/generator/templates/generator/password.html', {'password': thepassword})
+    return render(request, 'generator/password.html', {'password': thepassword})
 
 def about_us(request):
-    return render(request, 'password_generator/generator/templates/generator/about.html')
+    return render(request, 'generator/about.html')
